@@ -15,7 +15,7 @@ padding:  0px 40px;
 .tab-at{
     display: none;
     padding: 15px;
-    border: 2px solid gray;
+    border: 1px solid gray;
     border-top: none; 
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -35,6 +35,8 @@ padding:  0px 40px;
     top: 50%;
     transform: translateY(-50%);
     right: 10px;
+    transition: all 0.3s ease;
+    font-size: 24px;
 }
 .title-at.active::after{
     content: "-";
@@ -49,4 +51,5 @@ padding:  0px 40px;
     padding: 10px 15px;
     margin: 0;
 }
+
 

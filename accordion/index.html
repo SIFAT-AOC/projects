@@ -14,7 +14,7 @@
                 <h2>accordion letter 1</h2>
             </div>
             <div class="tab-at">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ad eaque nulla! Laborum aperiam perspiciatis dicta.</p>
+                <p class="accordion-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ad eaque nulla! Laborum aperiam perspiciatis dicta.</p>
             </div>
         </div>
         <div class="item-at">
@@ -22,7 +22,7 @@
                 <h2>accordion letter 1</h2>
             </div>
             <div class="tab-at">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ad eaque nulla! Laborum aperiam perspiciatis dicta.</p>
+                <p class="accordion-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ad eaque nulla! Laborum aperiam perspiciatis dicta.</p>
             </div>
         </div>
         <div class="item-at">
@@ -30,9 +30,30 @@
                 <h2>accordion letter 1</h2>
             </div>
             <div class="tab-at">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ad eaque nulla! Laborum aperiam perspiciatis dicta.</p>
+                <p class="accordion-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ad eaque nulla! Laborum aperiam perspiciatis dicta.</p>
             </div>
         </div>
     </div>
 </body>
+<script>
+    const items = document.querySelectorAll('.item-at');
+    
+    function toggleAccordion(event){
+        const itemToggle = event.currentTarget.querySelector('.title-at');
+        const itemtap = event.currentTarget.querySelector('.tab-at');
+        itemToggle.classList.toggle("active");
+        if(itemToggle.classList.contains('active')){
+        itemtap.style.display = "block";
+    }
+    else{
+        itemtap.style.display = "none";
+        
+    }
+}
+    
+    items.forEach((item) => 
+      item.addEventListener("click", toggleAccordion)
+    );
+    </script>
+    
 </html>
